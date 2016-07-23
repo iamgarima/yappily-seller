@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset="utf-8">
+  <title>Yappily-Seller</title>
+  <script type="text/javascript" src="js/lib/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.module.js"></script>
+  <script type="text/javascript" src="js/home.module.js"></script>
+  <script type="text/javascript" src="js/home.controller.js"></script>
+</head>
+<body ng-app="app">
+  <div ng-controller="HomeCtrl">
+    <!-- ******** home page ******** -->
+
+    <div data-section="yappily-logo">
+      <img src="img/logo.png">
+    </div>
+
+    <div data-section="seller-header-image">
+      <img ng-src="{{sellerData.headerImageUrl}}">
+    </div>
+
+    <div data-section="seller-logo">
+      <img ng-src="{{sellerData.logoUrl}}">
+    </div>
+
+    <div data-section="chat-button">
+      <button>Chat</button>
+    </div>
+
+    <div data-section="item-category-name" ng-repeat="tag in sellerData.tags">
+      <p>#{{tag}}</p>
+    </div>
+
+    <div data-section="item-name" ng-repeat="(category, categoryItems) in sellerData.items">
+      <h3>{{category}}</h3>
+      <div ng-repeat="categoryItem in categoryItems">
+        <img ng-src="{{categoryItem.imageUrl}}">
+        <p>{{categoryItem.title}}</p>
+        <p>{{categoryItem.description}}</p>
+      </div>
+    </div>
+    
+
+    <div data-section="footer">
+      <p>@All rights reserved</p>
+    </div>
+
+    <!-- / ******** home page ******** -->
+  </div> 
+</body>
+</html>
