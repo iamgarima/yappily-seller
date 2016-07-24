@@ -1,0 +1,8 @@
+<div data-section="item-name" ng-repeat="(category, categoryItems) in sellerItems">
+  <h3>{{category}}</h3>
+  <div ng-repeat="categoryItem in categoryItems">
+    <img ng-src="{{categoryItem.imageUrl}}">
+    <p>{{categoryItem.title}}</p>
+    <p>{{categoryItem.description}}</p>
+  </div>
+</div>
