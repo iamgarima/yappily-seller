@@ -1,6 +1,7 @@
 .seller-logo{
   position: absolute;
-  bottom:0px;
+  bottom:-25px;
+  left:30px;
   /*border: 5px;*/
 }
 
